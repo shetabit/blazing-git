@@ -69,7 +69,7 @@ git cp path/filename.ext newpath/filename.ext
 #### حذف فایل
 
 ```bash
-git rm path/filename.ext newpath/filename.ext
+git rm path/filename.ext
 ```
 
 #### کپی کردن فایل از stage در دایرکتوری پروژه
