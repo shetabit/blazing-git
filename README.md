@@ -110,3 +110,8 @@ git pull origin master
 git clone https://your-repository-address.git
 ```
 
+---
+
+# gitignore
+
+ابتدا یک فایل با پسوند gitignore ایجاد میکنیم
