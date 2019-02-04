@@ -80,13 +80,11 @@ git rm path/filename.ext
 git checkout -- filename.ext
 ```
 
-#### کپی کردن فایل از head (اخرین کامیت) در stage و پوشه پروژه
+#### Copy latest files from the last commit into `stage` and `working directory`.
 
 ```bash
 git checkout HEAD -- filename.ext
 ```
-
-
 
 # gitignore
 
@@ -130,3 +128,4 @@ git clone https://your-repository-address.git
 git remote set-url origin https://your-repository-address.git
  ```
 ---
+
