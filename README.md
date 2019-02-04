@@ -88,7 +88,7 @@ git checkout HEAD -- filename.ext
 
 # gitignore
 
-ابتدا یک فایل با پسوند gitignore ایجاد میکنیم
+we create a `.gitignore'` file and then use the below rules:
 
 #### پترن هایی که مورد استفاده قرار میگیرند
 
