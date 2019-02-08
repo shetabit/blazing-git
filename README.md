@@ -1,131 +1,104 @@
 # Quick Git Training
 
-#### Create repository in the project
+#### Basics:
+- First-time git setup
+- Getting & creating projects (or repositories)
+- Snapshotting and working with files
+- Branching & merging
+- Sharing projects (repositories) through git servers
+- Inspection & comparison
 
-```bash
-git init
-```
-
-#### View the current settings list
-
-```bash
-git config --list
-```
-
-#### Configuring the name
-
-```bash
-git config --global user.name "your name"
-```
-
-#### Viewing  the current status of the repository
-
-```bash
-git status
-```
-
-#### Adding file to stage
-
-```bash
-git add filename
-```
-
-#### Adding all of  file to stage
-
-```bash
-git add .
-```
-
-#### Adding all files with changes to file name or deleting file or moved
-
-```bash
-git add -A
-```
-
-#### committing
-
-```bash
-git commit -m "your comment"
-```
-
-#### Adding all files and commits them at a time
-
-```bash
-git commit -am "your comment"
-```
-
-#### Moving or renaming a file or folder
-
-```bash
-git mv path/filename.ext newpath/newfilename.ext
-```
-
-#### Copying file
-
-```bash
-git cp path/filename.ext newpath/filename.ext
-```
-
-#### Deleting File
-
-```bash
-git rm path/filename.ext
-```
-
-#### Copying file from stage in the project directory
-
-> در مواقعی مورد استفاده قرار میگیره که تغییراتی در فایل پروژه دادین اما متوجه میشین دیگه این تغییرات رو نمیخواین داشته باشین و فایل داخل stage مد نظرتونه
-
-```bash
-git checkout -- filename.ext
-```
-
-#### Copy latest files from the last commit into `stage` and `working directory`.
-
-```bash
-git checkout HEAD -- filename.ext
-```
-
-# gitignore
-
-create a `.gitignore'` file and then use the below rules:
-
-#### پترن هایی که مورد استفاده قرار میگیرند
-
-- /**/ :  دسترسی به تمامی مسیرهای زیرشاخه
-- * :  با تعداد تکرار صفر تا بینهایت از هر کاراکتر تطبیق میکند
-- ? : با یک کاراکتر تطبیق میکند
-- [] : کلاس کاراکتری
 ---
 
-# Repository
-####  Configuring repository url
+##### First-time git setup :
 
-```bash
-git remote add origin http:\\address.domain\to\repname\...
-```
+If you are new in git (new installer or first-time user) , you need to add some configuration for the first time.
 
-#### sending file to repository
+you can *see* or *write* *configs* using `git config` command.
 
-```bash
-git push origin master
-```
+| Command | Description |
+| ------- | ----------- |
+| `git config --global user.name "your name"` | Add (update) your name into configs. |
+| `git config --global user.email yourEmail@example.com` | Add (update) your email into configs. |
+| `git config --list` | Show a list of current configs. |
 
-#### getting the latest file changes from the server
-```bash
-git pull origin master
-```
+---
 
-#### git clone (Copying repository from the server on local )
+##### Getting & creating projects:
 
-```bash
-git clone https://your-repository-address.git
-```
+| Command | Description |
+| ------- | ----------- |
+| `git init` | Initialize a local Git repository |
+| `git clone <repository-url>` | Create a local copy of a remote repository |
 
+---
 
-#### Changing a remote's URL
- ```bash
-git remote set-url origin https://your-repository-address.git
- ```
+##### Snapshotting and working with files:
+
+| Command | Description |
+| ------- | ----------- |
+| `git status` | Check status |
+| `git add <file-name.txt>` | Add a file to the staging area |
+| `git add -A` | Add all new and changed files to the staging area |
+| `git commit -m "<commit message>"` | Commit changes |
+| `git commit -am "<commit message>"` | Add and commit changes in one command |
+| `git rm -r <file-name.txt>` | Remove a file (or folder) recursively |
+| `git mv <file-name.txt>` `<path/new-file-name.txt>` | Move or rename a file (or folder) |
+| `git cp <file-name.txt> <copy-file-name.txt>` | Copy a file (or folder) |
+
+---
+
+##### Branching and merging:
+
+| Command | Description |
+| ------- | ----------- |
+| `git branch` | List branches (the asterisk denotes the current branch) |
+| `git branch -a` | List all branches (local and remote) |
+| `git branch <branch-name>` | Create a new branch |
+| `git branch -d <branch-name>` | Delete a branch |
+| `git push origin --delete <branch-name>` | Delete a remote branch |
+| `git checkout -b <branch-name>` | Create a new branch and switch to it |
+| `git checkout -b <branch-name> origin/<branch-name>` | Clone a remote branch and switch to it |
+| `git checkout <branch-name>` | Switch to a branch |
+| `git checkout -` | Switch to the branch last checked out |
+| `git merge <branch-name>` | Merge a branch into the active branch |
+| `git merge <source-branch> <target-branch>` | Merge a branch into a target branch |
+
+---
+
+##### Sharing projects through git servers:
+
+> git is a **distributed version control system (DVCS)**, that means you can commit your work locally, and then sync your copy of the repository with the copy on the git server, so your team can have access to the latest files of the project through the git servers.
+
+if you want to use remote servers, you have 2 steps:
+
+1. ######  Add your remote server
+
+| Command | Description |
+| ------- | ----------- |
+| `git remote add <remote-name> <remote-repository-url>` | Add a remote repository. |
+| `git remote set-url <remote-name> <remote-repository-new-url>` | Set a new url for `<remote-name>` repository. |
+
+2. ######  Push your files into the remote server:
+
+| Command | Description |
+| ------- | ----------- |
+| `git push origin <branch name>` | Push a branch to your remote repository |
+| `git push -u origin <branch name>` | Push changes to remote repository (and remember the branch) |
+| `git push` | Push changes to remote repository (remembered branch) |
+| `git push origin --delete <branch name>` | Delete a remote branch |
+| `git pull` | Update local repository to the newest commit |
+| `git pull origin <branch name>` | Pull changes from remote repository |
+
+---
+
+###### Inspection & Comparison
+
+| Command | Description |
+| ------- | ----------- |
+| `git log` | View changes |
+| `git log --summary` | View changes (detailed) |
+| `git diff [source branch] [target branch}` | Preview changes before merging |
+
 ---
 
