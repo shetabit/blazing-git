@@ -157,6 +157,6 @@ we have something to add or complete in future in this document.
 you can help us to complete the ToDo list by doing them and creating  **pull request** .
 
 - [ ] Complete the [Undo things](#undo-things) section.
-- [ ] Add a section for rebasing technique.
-- [ ] Add a tagging section.
-
+- [ ] Add a section for `Rebasing and cherry-pick` technique.
+- [ ] Add a `Tags and versioning` section.
+- [ ] Add a some examples in each section.
