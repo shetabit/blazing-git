@@ -4,10 +4,10 @@
 
 - [First-time git setup](#first-time-git-setup)
 - [Getting & creating projects (or repositories)](#getting--creating-projects)
-- [Snapshotting & working with files](#snapshotting-and-working-with-files)
-- [Branching & merging](#Branching--merging)
-- [Sharing projects (repositories) through git servers](sharing-projects- through-gi- servers)
-- [Inspection & comparison](inspection--comparison)
+- [Snapshotting & working with files](#snapshotting--working-with-files)
+- [Branching & merging](#branching--merging)
+- [Sharing projects (repositories) through git servers](#sharing-projects-through-git-servers)
+- [Inspection & comparison](#inspection--comparison)
 
 ---
 
