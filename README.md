@@ -156,6 +156,7 @@ We have 2 different states:
 we have something to add or complete in future in this document.
 you can help us to complete the ToDo list by doing them and creating  **pull request** .
 
-- [ ] Complete the (Undo things)(#undo-things) section.
+- [ ] Complete the [Undo things](#undo-things) section.
 - [ ] Add a section for rebasing technique.
 - [ ] Add a tagging section.
+
