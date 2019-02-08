@@ -1,6 +1,6 @@
 # Quick Git Training
 
-#### Basics:
+### Basics:
 - First-time git setup
 - Getting & creating projects (or repositories)
 - Snapshotting and working with files
@@ -10,7 +10,7 @@
 
 ---
 
-##### First-time git setup :
+### First-time git setup :
 
 If you are new in git (new installer or first-time user) , you need to add some configuration for the first time.
 
@@ -24,7 +24,7 @@ you can *see* or *write* *configs* using `git config` command.
 
 ---
 
-##### Getting & creating projects:
+### Getting & creating projects:
 
 | Command | Description |
 | ------- | ----------- |
@@ -33,7 +33,7 @@ you can *see* or *write* *configs* using `git config` command.
 
 ---
 
-##### Snapshotting and working with files:
+### Snapshotting and working with files:
 
 | Command | Description |
 | ------- | ----------- |
@@ -48,7 +48,7 @@ you can *see* or *write* *configs* using `git config` command.
 
 ---
 
-##### Branching and merging:
+### Branching and merging:
 
 | Command | Description |
 | ------- | ----------- |
@@ -66,20 +66,20 @@ you can *see* or *write* *configs* using `git config` command.
 
 ---
 
-##### Sharing projects through git servers:
+### Sharing projects through git servers:
 
 > git is a **distributed version control system (DVCS)**, that means you can commit your work locally, and then sync your copy of the repository with the copy on the git server, so your team can have access to the latest files of the project through the git servers.
 
 if you want to use remote servers, you have 2 steps:
 
-1. ######  Add your remote server
+1. #####  Add your remote server
 
 | Command | Description |
 | ------- | ----------- |
 | `git remote add <remote-name> <remote-repository-url>` | Add a remote repository. |
 | `git remote set-url <remote-name> <remote-repository-new-url>` | Set a new url for `<remote-name>` repository. |
 
-2. ######  Push your files into the remote server:
+2. #####  Push your files into the remote server:
 
 | Command | Description |
 | ------- | ----------- |
@@ -92,7 +92,7 @@ if you want to use remote servers, you have 2 steps:
 
 ---
 
-###### Inspection & Comparison
+### Inspection & Comparison
 
 | Command | Description |
 | ------- | ----------- |
