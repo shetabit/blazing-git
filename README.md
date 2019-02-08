@@ -1,4 +1,4 @@
-# Quick Git Training
+# Quick Git Training :bowtie:
 
 ### Basics:
 
@@ -8,6 +8,7 @@
 - [Branching & merging](#branching--merging)
 - [Sharing projects (repositories) through git servers](#sharing-projects-through-git-servers)
 - [Inspection & comparison](#inspection--comparison)
+- [Using gitignore](#using-gitignore)
 
 ---
 
@@ -21,7 +22,7 @@ you can *see* or *write* *configs* using `git config` command.
 | ------- | ----------- |
 | `git config --global user.name "your name"` | Add (update) your name into configs. |
 | `git config --global user.email yourEmail@example.com` | Add (update) your email into configs. |
-| `git config --list` | Show a list of current configs. |
+| `git config --list` | Show list of current configs. |
 
 ---
 
@@ -102,4 +103,31 @@ you can *see* or *write* *configs* using `git config` command.
 | `git diff <source-branch> <target-branch>` | Preview changes before merging |
 
 ---
+
+### Using gitignore:
+
+the `.gitignore`file,  tells git which files (or patterns) it *should ignore*. It's usually used to **avoid committing transient files** from your working directory that aren't useful to other collaborators, such as compilation products, temporary files IDEs create, etc.
+(Note that all the gitignore files really concern only files that are not already tracked by git)
+
+create a file and name it  **`.gitignore`**, then use the below rules to ignore files:
+
+- A line starting with `#` serves as a comment.
+- An optional prefix `!` which negates the pattern.
+- A leading slash matches the beginning of the pathname. For example, `/*.c` matches `cat-file.c` but not `mozilla-sha1/sha1.c`.
+- `/**/` matches all sub pathnames, for example, `a/**/b` matches `a/b`, `a/x/b`, `a/x/y/b` and so on.
+- A trailing `/**` matches everything inside. For example, `abc/**` matches all files inside directory `abc`, relative to the location of the `.gitignore` file, with infinite depth.
+- `[]` matches one character in a selected range, for example [a-z] matches any character from a to z (a,b,c,d to z).
+- `?` matches any one character except `/`
+- `*` matches anything except `/`
+
+Example:
+
+```git
+# this is a comment
+# exclude everything except directory foo/bar
+/*
+!/foo
+/foo/*
+!/foo/bar
+```
 
